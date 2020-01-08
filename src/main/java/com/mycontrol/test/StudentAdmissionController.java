@@ -23,7 +23,7 @@ public class StudentAdmissionController {
 	@InitBinder
 	public void initBinder(WebDataBinder binder){
 //		binder.setDisallowedFields(new String[] {"studentMobile"});
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy***MM***dd");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		binder.registerCustomEditor(Date.class, "studentDOB", new CustomDateEditor(dateFormat, false));
 		binder.registerCustomEditor(String.class, "studentName", new StudentNameEditor());
 	}
